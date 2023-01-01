@@ -30,7 +30,3 @@ def login():
 @app.route("/dashboard")
 def dashboard():
     return render_template("dashboard.html", title="Dashboard")
-
-
-if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=8080)
