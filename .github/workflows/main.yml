@@ -3,7 +3,7 @@ name: Continuous Deployment
 on: push
 
 jobs:
-  checkout-repository:
+  tests:
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout repository
@@ -17,3 +17,9 @@ jobs:
         run: pip install -r requirements.txt
       - name: Run tests
         run: pytest
+        
+#   deploy:
+#     needs: tests
+#       runs-on: ubuntu-20.04
+#       steps:
+        
