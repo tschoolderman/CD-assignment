@@ -1,0 +1,61 @@
+body {
+    background-color: black;
+    margin: 0 auto;
+    max-width: 720px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
+
+h2 {
+    color: white;
+}
+
+h3 {
+    color: white;
+    text-align: center;
+}
+
+p {
+    color: white;
+    white-space: pre;
+}
+
+ul {
+    color: white;
+    list-style: circle;
+}
+
+pre {
+    color: brown;
+}
+
+label {
+    color: aqua;
+}
+
+input[type=submit] {
+    font-size: 24px;
+    background-color: crimson;
+    cursor: pointer;
+    padding: 14px 40px;
+    border-radius: 12px;
+}
+
+.largeText {
+    font-size: 26px;
+}
+
+.boldText {
+    font-weight: bold;
+}
+
+.error {
+    color: white;
+    background-color: red;
+}

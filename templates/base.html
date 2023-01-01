@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Use url_for to link a stylesheet named `style.css` here. -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+
+    <!-- Use Jinja to put a title here. -->
+    <title>{{ title }}</title>
+</head>
+
+<body>
+    <h1>CD Assignment</h1>
+    <h3>by Thomas Schoolderman</h3>
+    <h2>Menu</h2>
+    <ul>
+        <li><a href="/home">Home</a></li>
+        <li><a href="/magic">Magic</a></li>
+        <li><a href="/trap">It's a trap</a></li>
+    </ul>
+    {% block content %}
+    {% endblock %}
+</body>
+
+</html>
