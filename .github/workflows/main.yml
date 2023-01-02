@@ -31,6 +31,4 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            mkdir test
-            cd testfile
-            echo "test succesful"
+            bash script.sh
