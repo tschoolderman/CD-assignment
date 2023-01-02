@@ -31,5 +31,5 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            cd /home/
+            cd /home/assignment-cd/
             git pull git@github.com:tschoolderman/assignment-cd.git
