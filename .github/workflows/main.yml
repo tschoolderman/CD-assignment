@@ -32,4 +32,4 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             cd /home/
-            git clone https://github.com/tschoolderman/assignment-cd.git
+            git pull https://github.com/tschoolderman/assignment-cd.git
