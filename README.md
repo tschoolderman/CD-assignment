@@ -6,3 +6,4 @@ connecting to the server
 setting up the server
 cloning versus pulling
 fatal not a git repo
+ssh and removing folder from repo -> server
