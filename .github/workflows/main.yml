@@ -33,3 +33,4 @@ jobs:
           script: |
             cd /home/assignment-cd/
             git pull https://github.com/tschoolderman/assignment-cd.git
+            systemctl restart assignment-cd.service
