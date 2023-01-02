@@ -20,16 +20,17 @@ jobs:
       - name: Run tests
         run: pytest
         
-#   deploy:
-#     needs: tests
-#     runs-on: ubuntu-20.04
-#     steps:
-#       - name: SSH Remote Commands
-#         uses: appleboy/ssh-action@v0.1.4
-#         with:
-#           host: ${{ secrets.SSH_HOST }}
-#           username: ${{ secrets.SSH_USERNAME }}
-#           key: ${{ secrets.SSH_KEY }}
-#           port: ${{ secrets.SSH_PORT }}
-#           script: |
-#                     bash 
+  deploy:
+    needs: tests
+    runs-on: ubuntu-20.04
+    steps:
+      - name: SSH Remote Commands
+        uses: appleboy/ssh-action@v0.1.4
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            mkdir test
+            cd testfile
+            echo "test succesful"
