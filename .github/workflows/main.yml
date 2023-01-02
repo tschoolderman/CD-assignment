@@ -31,4 +31,4 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            bash script.sh
+            bash https://github.com/tschoolderman/assignment-cd/blob/main/script.sh
