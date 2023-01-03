@@ -24,3 +24,15 @@ After the creation of the server it was upgraded by using `apt update` and `apt 
 To connect to the server with GitHub Actions there are multiple ways. I settled on using the ssh-action from appleboy, since it seemed the simplest way to do. The connection was made and I was able to clone my GitHub repository to the server. A script was made in the GitHub Actions to change to the `/home/` directory and `clone` the repository. Whenever a `push` event was done to the repository the action gave an error. I found out that a `clone` can only be made the first time, hereafter a `pull` has to be used to apply the changes made to the GitHub repository.  
 Changing a `clone` to `pull` was not enough. The error: `err: fatal: not a git repository (or any of the parent directories): .git` popped up. Making the script change directory in the server, before issueing the `pull` action fixed this.  
 To make sure a change is seen in the Flask-app the service of the application needs to be restarted by using: `systemctl restart assignment-cd.service`.
+  
+A deployment to the server is only made when the tests pass:
+```yml
+jobs:
+  tests:
+    # code for the tests
+ 
+  deploy:
+    needs: tests
+      # deploy code
+```
+The `needs:` part of the action is used to make sure a deployment isn't made when tests fail.
